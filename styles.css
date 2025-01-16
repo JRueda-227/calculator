@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+/* Use this height in order to be able to vertically align calculator*/
+    height: 100vh; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    height: 600px;
+    width: 400px;
+    border: solid black 1px;
+}
+
+.display {
+    border: solid black 2px;
+    height: 120px;
+}
+
+.keypad {
+    padding: 4px;
+    gap: 4px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    height: 90px;
+    width: 90px;
+}
+
+.span-two {
+    width: 184px;
+}
