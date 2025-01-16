@@ -18,22 +18,26 @@ body {
 .calculator {
     height: 600px;
     width: 400px;
-    border: solid black 1px;
+    border: solid black 2px;
 }
 
 .display {
-    border: solid black 2px;
+    border-bottom: solid black 2px;
     height: 120px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .keypad {
-    padding: 4px;
-    gap: 4px;
-
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    padding: 4px;
+    gap: 4px;
 }
 
 button {
