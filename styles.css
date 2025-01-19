@@ -24,10 +24,12 @@ body {
 .display {
     border-bottom: solid black 2px;
     height: 120px;
+    font-size: 2rem;
 
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    padding: 10px;
 }
 
 .keypad {
@@ -35,7 +37,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-
     padding: 4px;
     gap: 4px;
 }
