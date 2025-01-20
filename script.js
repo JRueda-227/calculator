@@ -40,7 +40,18 @@ function operate(a, b, operator) {
 }
 
 function del() {
-
+    if (operandTwo !== '') {
+        operandTwo = operandTwo.slice(0, -1);
+        display(`${operandOne} ${operator} ${operandTwo}`);
+    }
+    if (operandTwo === '' && operator !== '') {
+        operator = '';
+        display(`${operandOne}`);
+    }
+    if (operandOne !== '') {
+        operandOne = operandOne.slice(0, -1);
+        display(`${operandOne}`);
+    }
 }
 
 function clear() {
@@ -57,6 +68,7 @@ function display(value) {
 
 const numberButtons = document.querySelectorAll('.number');
 const operatorButtons = document.querySelectorAll('.operator');
+const decimalButton = document.querySelector('.decimal');
 const deleteButton = document.querySelector('.delete');
 const clearButton = document.querySelector('.clear');
 const equalButton = document.querySelector('.equal');
@@ -108,6 +120,19 @@ equalButton.addEventListener('click', () => {
         operator = '';
         display(operandOne);
     }
+});
+
+decimalButton.addEventListener('click', (event) => {
+    const decimal = event.target.textContent;
+    if (operandOne.includes(decimal)) {
+        return;
+    }
+    operandOne += decimal;
+    display(operandOne);
+});
+
+deleteButton.addEventListener('click', () => {
+    del();
 })
 
 clearButton.addEventListener('click', clear);
